@@ -74,6 +74,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  align-self:flex-start;
 }
 
 .ai .profile {
