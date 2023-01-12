@@ -9,7 +9,6 @@ let loadInterval;
 
 //to show loading .... before the ai gives it results
 function loader(element){
-  console.log(element);
   element.textContent="";
   loadInterval=setInterval(()=>{
     element.textContent +='.';
@@ -75,7 +74,6 @@ const handleSubmit = async(e) => {
   chatContainer.innerHTML += chatStripe(true," ",uniqueId);
 
   chatContainer.scrollTop = chatContainer.scrollHeight;
-  console.log(uniqueId);
   const messageDiv = document.getElementById(uniqueId);
   loader(messageDiv);
 
@@ -103,7 +101,6 @@ const handleSubmit = async(e) => {
     const err = await response.text;
     messageDiv.innerHTML = "Something went wrong!";
 
-    alert(err);
   }
 }
 
